@@ -1,0 +1,23 @@
+Na wejściu mamy czarno-biały obrazek w tekstowym formacie PBM link, który zawiera dwuwierszowy nagłówek w którego drugim wierszu podane są rozmiary obrazka. Po nagłówku w kolejnych wierszach mamy podane 0-1 wartości kolejnych pikseli oddzielone spacjami, wiersze nie są dłuższe niż 70 znaków.
+
+Celem zadania jest policzenie ilości spójnych obszarów jedynek (zero to czarny kolor tła) w obrazku i wypisanie tej liczby.  
+
+Spójny obszar definiujemy jako zbiór pikseli między którymi można przejść przez sąsiadów nie wychodząc ze zbioru. Relację sąsiedztwa definiujemy jako 8-kierunkową czyli sąsiadami piksela jest 8 stykających się z nim pikseli w tym piksele stykające się rogiem.  Aby policzyć ilość składowych można stworzyć etykiety z numerem składowej spójności dla każdego piksela. 
+
+ 
+
+Przykład:
+
+
+Wejście:
+P1
+14 6
+0 1 0 1 0 1 0 0 0 0 0 0 0 0
+0 1 0 1 0 1 0 0 0 1 0 0 0 0
+0 1 1 1 1 1 0 0 1 0 0 0 0 0
+0 0 0 0 0 0 0 1 0 0 0 1 1 0
+0 1 1 1 0 0 1 0 0 0 0 1 0 1
+0 1 1 1 0 0 0 0 0 0 0 0 1 1
+
+Wyjście:
+4
