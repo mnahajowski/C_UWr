@@ -1,0 +1,45 @@
+W klubie dla brydżystów chcemy znaleźć wszystkie czwórki osób które będą mogły grać przez jak najdłuższy przedział czasu w trakcie roku.  Dla każdego brydżysty mamy podany pasujący mu przedział czasu w postaci początku i końca.
+
+Na wejściu w osobnym wierszu podajemy ilość brydżystów (maksymalne 512). Kolejne pary wierszy opisują początek i koniec dopuszczalnego przedziału czasu dla i-tego gracza (graczy kolejno numerujemy od zera). Czas podajemy jako 5 liczb całkowitych oddzielonych spacjami oznaczających kolejno miesiąc, dzień miesiąca, godzinę, minuty i sekundy. Dla czasów wewnętrznie tworzymy reprezentacje gdzie kolejne bity 32 bitowego int'a poczynając od najmniej znaczących są używane do pamiętania: sekund (6 bitów), minut (6 bitów), godziny (5 bitów), dnia miesiąca (5 bitów), miesiąca (4 bity). Pozostałe 6 bitów jest niewykorzystane.  
+
+UWAGA: Długość przedziału definiujemy jako różnicę między liczbami będącymi wewnętrzną reprezentacją czasu (tak więc nie będzie to dokładnie czas w sekundach).
+
+Program powinien na wyjściu wypisać w pierwszym wierszu długość najdłuższego znalezionego przedziału oraz w kolejności malejącej numery czterech graczy.  W kolejnych dwóch wierszach powinny być wypisane czasy początku i końca dla tego przedziału. Każdy czas wypisujemy najpierw jako liczbę w wewnętrznej reprezentacji, po której jest dwukropek i reprezentacja jak na wejściu (kolejno oddzielone spacjami: miesiąc, dzień,...). Wyjście dla wszystkich testów  jest jednoznaczne tzn. jest tylko jedna czwórka graczy o maksymalnie długim przedziale czasu.
+
+Jeśli zaś nie został znaleziony ani jeden niezerowy przedział to wpisujemy w jednym wierszu komunikat "NOT FOUND!" (tylko napis bez cudzysłowiów).
+
+ 
+
+Przykład:
+
+Wejście:
+
+5
+1 1 12 30 0
+1 30 20 0 0
+1 30 22 0 1
+9 30 22 0 0
+1 2 8 0 0
+1 21 23 0 0
+1 13 13 13 13
+1 27 16 15 0
+1 13 7 0 0
+1 22 7 0 0
+
+ Wyjście:
+
+108869 1 4 3 2 0
+5952333: 1 13 13 13 13
+7041024: 1 21 23 0 0
+
+For example:
+Test 	Result
+
+test_1
+
+	
+
+12774839 11 8 7 3
+31852405: 7 19 0 29 53
+44627244: 10 20 15 20 44
+
