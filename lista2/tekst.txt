@@ -1,0 +1,65 @@
+Zadanie
+Napisz program, który przetworzy plik wejściowy w ten sposób, że usunie z niego wszystkie powtarzające się, a przy tym sąsiadujące ze sobą wiersze z wyjątkiem jednego w każdej takiej serii; ten jeden przekaże na wyjście. Wiersze, które w bezpośrednim swoim sąsiedztwie nie mają kopii, program po prostu przesyła kolejno na wyjście. Żeby było się do czego odwoływać na pracowni, nazwiemy ten program "sameline". (Podzadanie: skróć ten opis, zachowując jednoznaczność przekazu).
+ 
+Przykłady zastosowań
+1. Komuś jest potrzebna połączona lista studentów uczęszczających na różne zajęcia. Zapisuje kilka takich list, jedna za drugą, w pliku (też zadanie), sortuje plik (też zadanie) i co widzi? Niektóre nazwiska się powtarzają. Ich ręczne usuwanie jest męczące i niebezpieczne (można skasować o jedno za dużo). Wtedy do pracy zaprzęgamy program "sameline".
+ 
+2. Ktoś mozolnie pisze latami własny słownik. Ma już w nim 27 tysięcy haseł. Od czasu do czasu go sortuje i spostrzega, że pewne hasła się powtórzyły. Banalizując -- bo w tym wypadku trzeba się zdublowanym hasłom przyjrzeć i wybrać ręcznie lepsze -- uruchamia "sameline", pozbywając się nadmiaru.
+
+ 
+3. Ktoś układa skorowidz. Sortuje hasła i... itd.
+
+  
+Szczegóły specyfikacji
+Program "sameline" czyta dane (w wersji sprawdzanej automatycznie) ze standardowego wejścia i przesyła wyniki na standardowe wyjście. (Na pracowni można go przerobić tak, aby czytał dane z dowolnego źródła i przesyłał wyniki na dowolne wyjście -- aby używał dowolnych plików).
+ 
+Program porównuje całe wiersze. (Na pracowni można go uzupełnić o możliwość porównywania wierszy do kolumny k).
+ 
+Program nie interpretuje znaków niewidocznych w tekście (ang. white spaces) występujących na prawo od ostatniego znaku widocznego w wierszu. Te skrajne niewidoczne znaki nie wpływają na wynik porównywania wierszy.  Wyjątki. 1. Zupełnie puste wiersze program traktuje jako równe sobie i pomija powtórzone. 2. Wiersze, w których występują tylko znaki niewidoczne w tekście, na przykład same spacje, lecz w różnej liczbie, albo różne znaki niewidoczne w tekście w różnym układzie, program traktuje jako różne, (W wersji na pracowni program może utożsamiać podczas porównywania ciągi wewnętrznych spacji z jedną spacją).
+ 
+Zakładamy (dla ułatwienia), że na końcu danych występują co najmniej dwa puste wiersze. Tę grupę pustych wierszy program redukuje na wyjściu -- jak zwykle -- do jednego pustego wiersza.
+
+ 
+Zakładamy, że bufory programu (długości wierszy) nie przekraczają 6000 znaków. (W wersjach ulepszonych na pracowni można to zrealizować dynamicznie).
+ 
+Program reaguje poprawnie zarówno w przypadku parzystej, jak i nieparzystej liczby wierszy w pliku wejściowym; nie załamuje się również, jeśli na wejściu nie ma żadnych danych; niczego nie "zjada" na końcu.
+ 
+
+Przykładowe dane i wyniki (ograniczone liniami kreskowanymi, które nie są ich częścią)
+-------------------------------------------------------
+
+Szczegóły spe
+Szczegóły spec
+Szczegóły spe
+Szczegóły spec
+Szczegóły spec
+Szczegóły spec
+Szczegóły spec
+Szczegóły spec
+ 
+Program "sameline" czyta (w wersji sprawdzanej
+Program "sameline" czyta (w wersji sprawdzanej
+Program "sameline" czyta (w wersji sprawdzanej
+Ko, Ko
+Koniec?
+KOniec
+KoNiec
+Koniec końców
+Koniec końców
+Koniec końców
+ 
+-------------------------------------------------------
+Szczegóły spe
+Szczegóły spec
+Szczegóły spe
+Szczegóły spec
+Szczegóły spec
+Program "sameline" czyta (w wersji sprawdzanej
+Ko, Ko
+Koniec?
+KOniec
+KoNiec
+Koniec końców
+Koniec końców
+-------------------------------------------------------
+ 
