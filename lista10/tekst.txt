@@ -1,0 +1,18 @@
+Zadanie: Obliczanie liczby spełniających wartościowań dla zadanych formuł rachunku zdań.
+
+Rozważamy formuły rachunku zdań zbudowane ze zmiennych zdaniowych (oznaczanych pojedynczymi małymi literami, np. a lub p), stałych 1 i 0 (oznaczających wartości prawda i fałsz) oraz spójników logicznych: negacji (~), koniunkcji (&), alternatywy (|), implikacji (>) oraz równoważności (=). Reguły budowania poprawnych formuł są takie, jak na wykładzie Logika dla informatyków; czyli mogą one zawierać prawidłowo rozstawione nawiasy okrągłe oraz przyjmujemy podane tam reguły kolejności wiązania oraz łączności operatorów. Na przykład prawo kompozycji zapiszemy jako (p|q>r)>p>r. Zadaniem programu jest wczytanie liczby n <= 10 oraz n kolejnych formuł i dla każdej z nich wypisanie liczby różnych wartościowań występujących w niej zmiennych, które spełniają tę formułę. Zakładamy, że formuły nie są dłuższe niż 1000 znaków i że mogą zawierać dowolne z 26 zmiennych oznaczonych literami a,b, ..., z. Jeśli formuła zawiera m różnych zmiennych, to prawidłowa odpowiedź będzie z przedziału od 0 (formuła zawsze fałszywa) do 2m - (formuła jest tautologią). Dla prawa kompozycji poprawną odpowiedzią jest 8.
+
+Dane dla programu podane są na standardowym wejściu i zawierają w pierwszym wierszu liczbę n, 0 < n <= 10, a w kolejnych n wierszach pojedyncze formuły zakończone średnikiem. Wyniki programu powinny być wypisane do standardowego wyjścia i składać się z n wierszy. W i-tym wierszu, 1 <= i <= n, na początku powinna być jedna liczba całkowita równa liczbie różnych wartościowań zmiennych występujących w i-tej formule z wejścia, które ją spełniają.
+
+Wskazówka: Aby umożliwić programowi szybkie obliczanie wartości wyrażenia warto przekształcić je do ONP (odwrotnej notacji polskiej). Takie przekształcenie można zrealizować pisząc funkcje podobne do funkcji wyrazenie, skladnik i czynnik z przykładu z ósmego wykładu, który implementował kalkulator na liczbach rzeczywistych. Tu trzeba napisać funkcje dla równoważności, implikacji, alternatywy, koniunkcji i negacji oraz funkcję czynnik która będzie przetwarzać zmienną lub stałą lub formułę w nawiasach.
+
+Przykład
+3
+~(p|q&r);
+~~p|~(r)|p>r;
+p|~p>~p&p;
+
+Wynik:
+3
+2
+0
