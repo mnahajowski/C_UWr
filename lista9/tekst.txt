@@ -1,0 +1,41 @@
+Reorganizacja drzewa.
+
+Początkowo drzewo składa się z korzenia o identyfikatorze 1. Na wejściu znajduje się ciąg operacji na drzewie. Każda operacja znajduje się w osobnym wierszu. Występują dwa rodzaje operacji:
+- Dodaj wierzchołek: wiersz zaczynający się od litery 'd', po której wystąpią dwie liczby (wszystkie 3 elementy są oddzielone spacjami) - pierwsza to identyfikator dodawanego wierzchołka, druga to identyfikator rodzica. Należy utworzyć nowy wierzchołek o zadanym identyfikatorze (identyfikatory będą unikalne) i podpiąć go pod zadanego rodzica.
+- Przenieś poddrzewo: wiersz zaczynający się od litery 'p', po której wystąpią dwie liczby - pierwsza to identyfikator wierzchołka definiującego poddrzewo do przeniesienia, a druga to identyfikator nowego rodzica tego wierzchołka. Należy zmienić rodzica zadanemu wierzchołkowi (całemu poddrzewu) na nowego.
+
+
+Każdy wierzchołek może mieć do 10 synów. Identyfikator wierzchołka to liczba z przedziału [1,100]. Nigdy nie wystąpi operacja przeniesienia wierzchołka pod swojego potomka (nigdy nie powstaną cykle).
+
+W pierwszym wierszu wejścia znajduje się liczba całkowita n<=100 określająca ile operacji należy wykonać. W każdym z kolejnych n wierszy znajduje się opis jednej operacji, wg specyfikacji powyżej.
+
+Napisz program, który wykona ten ciąg operacji, a następnie poda na jakiej głębokości (korzeń znajduje się na głębokości 1) znajduje się wierzchołek o identyfikatorze 2.
+
+ 
+
+Przykład 1
+4
+d 3 1
+d 2 3
+d 4 1
+p 3 4
+
+Wynik:
+4
+
+Przykład 2
+11
+d 3 1
+d 4 1
+d 5 3
+d 2 3
+d 6 3
+p 4 2
+d 7 1
+p 2 7
+d 8 1
+p 3 8
+p 7 8
+
+Wynik:
+4
