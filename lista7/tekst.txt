@@ -1,0 +1,27 @@
+Na wejściu mamy labirynt, który będzie zalewany wodą.
+
+W pierwszej linii wejścia znajdują się dwie liczby całkowite 1 <= n,m <= 100, które oznaczają wymiary labiryntu. W następnych n wierszach znajduje się opis labiryntu: "#" oznacza ścianę labiryntu, "-" oznacza puste pole, zaś "!" oznacza źródło wody (każdy wiersz ma dokładnie m znaków, nie licząc końca wiersza).
+
+Na początku w labiryncie jest dokładnie jedno pole zalane (źródło wody). Z czasem woda rozlewa się coraz dalej: w sekundzie t+1 zalane są wszystkie pola, które były zalane w sekundzie t oraz wszystkie puste pola z nimi sąsiadujące (mające wspólny bok). Oblicz, ile sekund potrzeba na całkowite zalanie labiryntu wodą. Jeśli labiryntu nie da się całkiem zalać wodą, wypisz "-1", w przeciwnym razie podaj liczbę sekund potrzebnych na zalanie wszystkich pustych pól.
+
+Przykłady:
+
+Wejście:
+5 7
+#----##
+--##---
+--##---
+-!####-
+##-----
+
+Wyjście:
+16
+
+Wejście:
+3 3
+--#
+##-
+-!-
+
+Wyjście:
+-1
