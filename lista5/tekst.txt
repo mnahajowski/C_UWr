@@ -1,0 +1,83 @@
+Napisz program symulujący grę w Tetrisa.
+
+Na wejściu dane są liczby całkowite m, n, k, gdzie 1 <= m <= 200, 1 <= n <= 200, 1 <= k <= 2000.
+Dalej na wejściu znajduje się k wierszy, każdy zawierający z znak c i liczbę x.
+
+Plansza gry ma szarokość m i wysokość n; na początku jest pusta.
+Dla każdej figury, znak c oznacza jej typ, a liczba x pozycję poziomą figury na planszy.
+Konkretnie x oznacza indeks kolumny na planszy, w której znajduje się skrajnie lewa kolumna figury.
+Kolumny indeksujemy liczbami od 0 do m-1.
+
+Figura pojawia się zawsze na górze planszy (pierwszy wiersz figury odpowiada pierwszemu wierszowi planszy) i zaczynając od kolumny x.
+Następnie opada do momentu kiedy dalsze opadanie powodowałoby nałożenie się figury z zawartością planszy lub wyjściem poza nią.
+Wtedy figura zostaje na planszy.
+Jeśli po opadnięciu figury powstały jakieś wiersze w całości wypełnione, zostają one usunięte, a dla każdego takiego wiersza zawartość wierszy powyżej niego ulega przesunięciu o 1 w dół.
+
+Jako wynik należy wypisać zawartość planszy w formie n wierszy po m znaków.
+Znakiem X reprezentujemy pole wypełnione, a kropką pole puste.
+
+Typy figur są następujące (X oznacza pole wypełnione, a kropka pole puste):
+Typ K: rozmiar 2x2
+XX
+XX
+
+Typ T: rozmiar 3x2
+XXX
+.X.
+
+Typ I: rozmiar 1x4
+X
+X
+X
+X
+
+Typ F: rozmiar 2x3
+XX
+X.
+X.
+
+Typ W: rozmiar 5x3:
+X.X.X
+X.X.X
+XXXXX
+
+Typ specjalny *: rozmiar 1x1:
+Bomba. Gdy już osiądzie (tak jak zwykła figura) zamiast zostawać na planszy powoduje wyczyszczenie zawartości w otaczającym ją kwadracie 3x3.
+
+Przykład 1.
+5 10 3
+K 0
+F 2
+W 0
+
+Wynik:
+.....
+.....
+.....
+.....
+.....
+X.X.X
+X.X.X
+..XX.
+XXX..
+XXX..
+
+Przykład 2.
+5 10 5
+K 0
+K 0
+K 3
+K 3
+* 2
+
+Wynik:
+.....
+.....
+.....
+.....
+.....
+.....
+XX.XX
+XX.XX
+X...X
+X...X
